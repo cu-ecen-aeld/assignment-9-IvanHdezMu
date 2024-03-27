@@ -5,13 +5,13 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = 2eafa005e9562d6b48d19c906a3afe083ed06de7
+AESD_ASSIGNMENTS_VERSION = 5736a3a5c1441e8c2c1d92999e487fc1ddc3af97
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
 AESD_ASSIGNMENTS_SITE = git@github.com:cu-ecen-aeld/assignments-3-and-later-IvanHdezMu.git
-AESD_ASSIGNMENTS_SITE_METHOD = git
-AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
+AESDCHAR_DRIVER_SITE_METHOD = git
+AESDCHAR_DRIVER_GIT_SUBMODULES = YES
 
 AESDCHAR_DRIVER_MODULE_SUBDIRS = aesd-char-driver
 
@@ -23,6 +23,3 @@ endef
 
 $(eval $(kernel-module))
 $(eval $(generic-package))
-
-
-
