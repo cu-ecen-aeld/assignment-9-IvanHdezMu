@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+#Script to clean buildroot configuration
+#Author: Madeleine Monfort
 
-cd 'dirname $0'
-make -C buildroot distclean
+
+cd buildroot
+make distclean

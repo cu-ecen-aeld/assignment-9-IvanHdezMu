@@ -1,23 +1,21 @@
-#!/bin/sh
+#! /bin/sh
 
 case "$1" in
-    start)
-        echo "Executing module_load and scull_load scripts"
-        /usr/bin/module_load faulty
-        /usr/bin/scull_load
-        modprobe hello
-        aesdchar_load
-        ;;
-    stop)
-        echo "Stopping module_load and scull_load scripts"
-        /usr/bin/module_unload faulty
-        /usr/bin/scull_unload
-        rmmod hello
-        aesdchar_unload
-        ;;
-      *)
-        echo "Usage: $0 {start|stop}"
-        exit 1
+	start)
+	  echo "Load scull and misc-modules"
+	  scull_load
+	  module_load faulty
+	  modprobe hello
+	  ;;
+	stop)
+	  echo "Unload scull and misc-modules"
+	  scull_unload
+	  module_unload faulty
+	  rmmod hello
+	  ;;
+	*)
+	  echo "Usage: $0 {start | stop}"
+	exit 1
 esac
 
 exit 0
